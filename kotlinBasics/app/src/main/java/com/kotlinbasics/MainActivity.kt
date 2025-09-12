@@ -28,19 +28,54 @@ class MainActivity : ComponentActivity() {
             }
         }
         week02Variables()
+        week02Functions()
     }
 }
 
 fun week02Variables(){
-    println("week02 Variables")
+//    println("week02 Variables")
+//
+//    val courseName = "Moblile Programing"
+//    //courseName = "i"
+//    var week = 1
+//    week = 2
+//
+//    println("Course : $courseName")
+//    println("Week : $week")
 
-    val courseName = "Moblile Programing"
-    //courseName = "i"
-    var week = 1
-    week = 2
+    println("== Kotlin Variables ==")
 
-    println("Course : $courseName")
-    println("Week : $week")
+    val name : String = "Android"
+    var version = 8.1
+    println("Hello $name $version")
+
+    val age : Int = 23
+    val height : Double = 177.7
+    val isStudent : Boolean = false
+
+    println("Age :  $age, Heght : $height, Student : $isStudent")
+}
+
+
+fun week02Functions(){
+    println("Week02 Functions")
+//
+//    fun greet(name: String) = "Hello, $name"
+//    println(greet("Andriod Developer"))
+
+    println("== Kotlin Functions ==")
+    fun greet(name : String) : String{
+        return "Hello, $name"
+    }
+
+    fun add(a: Int, b: Int) = a + b
+
+    fun introduce(name : String, age : Int =19){
+        println("My name is $name and I'm $age years old")
+    }
+    println(greet("Kotlin"))
+    print("Sum : ${add(5, 71)}")
+    introduce("Kim",29)
 }
 
 @Composable
